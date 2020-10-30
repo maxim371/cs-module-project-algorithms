@@ -4,8 +4,18 @@ Returns: an integer
 '''
 def single_number(arr):
     # Your code here
+    first = []
+    second = []
 
-    pass
+    for item in arr:
+        if item not in first:
+            first.append(item)
+        else:
+            second.append(item)
+
+    for num in first:
+        if num not in second:
+            return num
 
 
 if __name__ == '__main__':
